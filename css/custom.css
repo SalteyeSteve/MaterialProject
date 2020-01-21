@@ -13,3 +13,8 @@
 /*For bigger Desktops*/
 @media screen and (min-width: 1200px) {
 }
+
+.img-tab {
+    width: 500px;
+    height: auto;
+}
