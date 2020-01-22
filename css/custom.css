@@ -1,20 +1,43 @@
 /* For small Phones */
 @media screen and (min-width: 576px) {
-
+    .card {
+        width: auto;
+    }
+    .carousel {
+        height: 500px;
+        width: 520px;
+    }
 }
 /* For Tablets */
 @media screen and (min-width: 768px) {
-
+    .card {
+        height: 450px;
+        max-width: 500px;
+    }
+    .carousel {
+        height: 500px;
+        width: 700px;
+    }
 }
 /* For smaller Desktops*/
 @media screen and (min-width: 976px) {
-
+    .card {
+        height: 450px;
+        max-width: 500px;
+    }
+    .carousel {
+        height: 500px;
+        width: 950px;
+    }
 }
 /*For bigger Desktops*/
 @media screen and (min-width: 1200px) {
-}
-
-.img-tab {
-    width: 500px;
-    height: auto;
+    .card {
+        height: 450px;
+        max-width: 500px;
+    }
+    .carousel {
+        height: 500px;
+        width: 1200px;
+    }
 }

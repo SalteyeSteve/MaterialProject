@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-
+    // $('.carousel').carousel();
+    $('.carousel').carousel({});
     // simple ajax get action
     $('.selector').click(function () {
         let id = $(this).data('id');
