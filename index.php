@@ -8,7 +8,7 @@
 </head>
     <body>
         <?php include "nav.html"?>
-        <main>
+        <main class="content">
             <?php include "home.php"?>
             <?php include "windsurfing.php"?>
             <?php include "mountainclimbing.php"?>

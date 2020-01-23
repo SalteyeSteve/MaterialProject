@@ -10,7 +10,7 @@
     --shadow-small: 0 1px 6px rgba(0,0,0,0.5);
     --shadow-normal: 0 4px 10px rgba(0,0,0,0.5);
     --shadow-expanded: 0 5px 10px rgba(0,0,0,0.5);
-    --fill: #C9CAFF;
+    --fill: #eaebf1;
     --fill-darker: #9698FF;
     --fill-opaque: rgba(201, 202, 255, 0.21);
     /* Grid system */
@@ -29,7 +29,7 @@
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     background-color: var(--fill-opaque);
 }
@@ -278,13 +278,6 @@
     }
 }
 @media only screen and (min-width: 1201px) {
-    .parallax {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
     .col.dt1 {
         width: var(--g1);
         margin-left: auto;
@@ -359,11 +352,34 @@
     }
 }
 
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-0 {
+    background-image: url("../img/himalaya-background.jpg");
+    height: 120px;
+}
+.parallax-1 {
+    background-image: url("../img/himalaya-background.jpg");
+    height: 400px;
+}
+.parallax-2 {
+    background-image: url("../img/cancun.jpg");
+    height: 300px;
+}
+.parallax-3 {
+    background-image: url("../img/himalaya-background.jpg");
+    height: 650px;
+}
+
 body {
     font-family: 'Roboto 2', 'Helvetica Neue', sans-serif;
     margin: 0;
     background: var(--fill);
-    background-image: url("../img/himalaya-background.jpg");
     background-repeat: no-repeat;
 }
 
@@ -470,7 +486,6 @@ img {
     border-style: none
 }
 .carousel {
-    overflow: hidden;
     position: relative;
     -webkit-perspective: 500px;
     perspective: 500px;
@@ -500,13 +515,15 @@ img {
 }
 
 .card {
+    color: black;
     margin: .5rem 0 1rem 0;
     border: 0.1px solid rgba(105, 105, 105, 0.33);
     box-shadow: var(--shadow-small);
     background: var(--fill);
 }
 
-.card .card-title {
+.card-title {
+    color: black !important;
     font-size: 2em;
     font-weight: 300;
 }
@@ -526,7 +543,7 @@ img {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 100%
+    width: 100%;
 }
 
 .card .card-img .card-title {
@@ -564,13 +581,20 @@ nav > ul > li > a{
 }
 
 header {
-    position: relative;
-    color: black;
     background-color: var(--primary-light);
     width: 100%;
     height: 56px;
     line-height: 56px;
     box-shadow: var(--shadow-small);
+    z-index: 10;
+}
+
+.header {
+    padding: 10px 16px;
+    background-color: var(--fill-opaque);
+    color: #f1f1f1;
+    box-shadow: var(--shadow-small);
+    z-index: 10;
 }
 
 .hide {
@@ -581,27 +605,19 @@ header {
     padding:25px;
 }
 
-#material-tabs {
-    position: relative;
-    display: flex;
-    padding:0;
-}
 
-#material-tabs>a {
-    position: relative;
-    display:inline-block;
+.material-tabs>a:not(.link) {
+    padding: 0 50px 0;
+    float: left;
     text-decoration: none;
-    padding: 22px;
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: 600;
-    color: black;
+    font-weight: 500;
+    color: white;
     text-align: center;
-    outline: none;
 }
 
 #material-tabs>a.active {
-    font-weight: 700;
     outline:none;
 }
 
@@ -625,24 +641,4 @@ header {
     left: 0;
     transition: left .2s ease;
     -webkit-transition: left .2s ease;
-}
-
-#tab1-tab.active ~ span.outline {
-    left: 0;
-    width: 160px;
-}
-
-#tab2-tab.active ~ span.outline {
-    left:165px;
-    width: 82px;
-}
-
-#tab3-tab.active ~ span.outline {
-    left: 253px;
-    width: 135px;
-}
-
-#tab4-tab.active ~ span.outline {
-    left:392px;
-    width: 163px;
 }

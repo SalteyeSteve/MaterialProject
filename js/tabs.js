@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#material-tabs').each(function() {
+    $('.material-tabs').each(function() {
 
         var $active, $content, $links = $(this).find('a');
 
@@ -15,6 +15,7 @@ $(document).ready(function() {
         $(this).on('click', 'a', function(e) {
 
             $active.removeClass('active');
+            console.log($content);
             $content.hide();
 
             $active = $(this);
