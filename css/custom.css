@@ -60,3 +60,11 @@
 .opaque {
     background-color: rgba(43, 67, 202, 0.51);
 }
+
+.tab-link>a {
+    transition: transform .5s;
+}
+
+.tab-link>a:hover {
+    transform: scale(0.8);
+}
